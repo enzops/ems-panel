@@ -1,0 +1,2 @@
+<div class="p-2"><a href="reset-password.php" class="btn btn-warning disabled"><i class="fas fa-undo-alt"></i> Réinitialiser son mot de passe</a></div>  
+<div class="p-2"><a href="logout.php" class="btn btn-danger ml-3"><i class="fas fa-sign-out-alt"></i> Se déconnecter</a></div>

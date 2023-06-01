@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  rp-panel-ems-web:
+    image: rp-panel-ems-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rp-panel-ems-web
+    volumes:
+    - .:/var/www/html/
+    ports:
+      - "8080:80"
+    tty: true
+    networks:
+      rp-panel:
+        ipv4_address: 192.168.99.2
+  rp-panel-ems-sql:
+    container_name: rp-panel-ems-sql
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_USER=rp-panel
+      - MYSQL_PASSWORD=test
+      - MYSQL_DATABASE=rp-panel
+    volumes:
+      - ./sql/:/docker-entrypoint-initdb.d
+    networks:
+      rp-panel:
+        ipv4_address: 192.168.99.3
+
+networks:
+  rp-panel:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.99.0/24"

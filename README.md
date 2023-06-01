@@ -2,12 +2,12 @@
 ![GitHub](https://img.shields.io/github/license/enzops/ems-panel)
 
 ## About
-> ⚠️ Don't use this to store any sensitive data. I don't give any warranty on security of this panel.
+> ⚠️ Don't store sensitive data. I don't give any warranty on security of this panel.
 
 I created this web panel to manage an hospital in my previous FiveM RP server. This tool was usefull compared to the google sheet we've firstly made.
 After the server was closed, I decided to share.
 
-This is my first web development, so there is a lot of errors, that's not optimized, sometimes it's just some coopies from stackoverflow...
+This is my first web development, so there is a lot of errors, that's not optimized, sometimes it's just some copy/paste from stackoverflow.
 
 ## Features
 + Administration
@@ -23,6 +23,11 @@ This is my first web development, so there is a lot of errors, that's not optimi
   + Change picture
   + Upload a signature
 + Home page with caroussel and all staff member
+
+## Usage
+```bash
+dopcker-compose up -d
+```
 
 ## Screenshots  
 ![Homepage](https://i.imgur.com/mL5ZBoQ.png)
